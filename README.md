@@ -16,12 +16,12 @@ The manuscript of this paper can be accessed at https://arxiv.org/abs/2408.01926
  -  General Usage
 ***scalar-on-tensor regression.***
 ```
-		    model  =  TensorDecisionTreeRegressor(max_depth=3, min_samples_split=2,split_method='variance', split_rank=2, CP_reg_rank=4, Tucker_reg_rank=3, n_mode=3)
-			model.use_mean_as_threshold  =  False
-			model.sample_rate  =  1
-			model.fit(X,y)
-			model.print_tree()
-			model.prune(X,y,model_type='cp',alpha=0.) 
+model  =  TensorDecisionTreeRegressor(max_depth=3, min_samples_split=2,split_method='variance', split_rank=2, CP_reg_rank=4, Tucker_reg_rank=3, n_mode=3)
+model.use_mean_as_threshold  =  False
+model.sample_rate  =  1
+model.fit(X,y)
+model.print_tree()
+model.prune(X,y,model_type='cp',alpha=0.) 
 ```
 
 The first line defines a TT model, with max_depth specifying the maximal depth of the generated tree structure; min_sample_split specifying the minimum number of samples needed to perform a split; split_method indicates the splitting criteria and optimization methods. Currently, we support the following options:
